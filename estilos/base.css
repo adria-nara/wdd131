@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 /* Estilização do Header */
@@ -114,12 +115,12 @@ section h2 {
     margin-right: 30px;
 }
 
-.estado {
+.meue-estado {
   margin-top: 20px;
   margin-left: 30px;
 }
 
-.estado h3 {
+.meu-estado h3 {
   max-width: 60%;
   text-align: center;
   font-size: 1.1rem;
