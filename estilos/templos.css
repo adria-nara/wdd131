@@ -86,7 +86,7 @@ nav a {
   color: var(--light-text);
   text-decoration: none;
   padding: 0.9rem 1.5rem;
-  font-weight: 5rem;
+  font-weight: 450;
   transition: background-color 0.2s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
