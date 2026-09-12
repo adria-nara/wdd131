@@ -1,20 +1,16 @@
-/* ==============================================================
-                Interatividade e Responsividade
-   ============================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Controle do Menu Hambúrguer (Mobile)
-  const menuButton = document.getElementById('menu-button');
-  const listaMenu = document.getElementById('menu');
+  const menuBotao= document.getElementById('botao-menu');
+  const menuPrincipal = document.getElementById('menu-principal');
 
-  if (menuButton && listaMenu) {
-    menuButton.addEventListener('click', () => {
-      listaMenu.classList.toggle('open');
+  if (menuBotao && menuPrincipal) {
+    menuBotao.addEventListener('click', () => {
+      menuPrincipal.classList.toggle('open');
       
       // Altera o ícone do botão entre hambúrguer (☰) e fechar (✕)
-      const isOpen = listaMenu.classList.contains('open');
-      menuButton.textContent = isOpen ? '✕' : '☰';
-      menuButton.setAttribute('aria-expanded', isOpen);
+      const isOpen = menuPrincipal.classList.contains('open');
+      menuBotao.textContent = isOpen ? '✕' : '☰';
+      menuBotao.setAttribute('aria-expanded', isOpen);
     });
   }
 

@@ -1,8 +1,6 @@
-/* =============================================== 
-              Estilos Base - Mobile
-   =============================================== */
+/* CSS - Mobile */
 
-/* Variáveis Globais */
+/*
 :root {
   --primary-color: #0b3c5d;
   --secondary-color: #328cc1;
@@ -14,9 +12,23 @@
   --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --radius: 8px;
+} */
+
+:root {
+  --primary-color: #0f3b25;
+  --secondary-color: #1e5a38;
+  --accent-color: #70cf98;
+  --bg-color: #f1f6f3;
+  --card-bg: #ffffff;
+  --text-color: #112217;
+  --light-text: #ffffff;
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 8px;
 }
 
-/* Reset página*/ 
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +45,6 @@ body {
   flex-direction: column;
 }
 
-/* 2. Cabeçalho e Navegação (Mobile) */
 header {
   background-color: var(--primary-color);
   color: var(--light-text);
@@ -43,7 +54,7 @@ header {
   z-index: 1000;
 }
 
-.box-header {
+.cabecalho {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -57,7 +68,7 @@ header h1 {
 }
 
 /* Botão Hambúrguer */
-#menu-button {
+#botao-menu {
   background: none;
   border: none;
   color: var(--light-text);
@@ -67,7 +78,7 @@ header h1 {
   transition: transform 0.2s ease;
 }
 
-#menu-button:focus {
+#botao-menu:focus {
   outline: 2px solid var(--accent-color);
 }
 
