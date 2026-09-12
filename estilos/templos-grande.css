@@ -1,0 +1,56 @@
+/* =========================================
+           Telas Maiores -  Desktop
+   ========================================= */
+
+@media screen and (min-width: 640px) {
+
+  /* 1. Ajustes no Cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+  }
+
+  .cabecalho {
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Oculta o botão hambúrguer */
+  #menu-button {
+    display: none;
+  }
+
+  /* Exibe a navegação horizontalmente */
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    border-top: none;
+    background-color: transparent;
+  }
+
+  nav a {
+    border-bottom: none;
+    border-radius: var(--radius);
+    margin-left: 0.3rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* 2. Layout em Múltiplas Colunas para os Cards */
+  .album-templo {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .templo img {
+    height: 200px;
+  }
+
+  #categoria {
+    font-size: 2rem;
+  }
+}
