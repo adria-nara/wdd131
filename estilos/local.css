@@ -1,0 +1,124 @@
+/* =============================================== 
+              Estilos Base - Mobile
+   =============================================== */
+
+/* Reset e configurações gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffff;
+    color: #574f4f;
+    line-height: 1.5;
+}
+
+header, main, footer {
+    max-width: 1000px;
+    width: 90%;
+    margin: .5rem auto;
+}
+
+
+/* Cabeçalho superior */
+.box-header {
+    background-color: #556299; 
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+    border-bottom: 8px solid #d9b310; 
+}
+
+.box-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Container Principal */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagem Hero */
+.hero-image {
+    width: 90%;
+    margin: .5rem 1.6rem;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* Seções de Informações (Dados / Weather) */
+.dados {
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px 15px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    /* Grid para alinhar rótulos (h3) e valores (p) */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+/* Títulos das Seções */
+.dados h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #111111;
+    margin-bottom: 8px;
+}
+
+/* Ícone de Tempo no Mobile */
+.dados img {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-bottom: 12px;
+}
+
+/* Rótulos (ex: Area, Population) */
+.dados h3 {
+    text-align: right;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #222222;
+}
+
+/* Valores correspondentes */
+.dados p {
+    text-align: left;
+    font-size: 0.92rem;
+    color: #3b7399;
+}
+
+/* Rodapé */
+footer {
+    background-color: #556299;  
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 10px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 3px 0;
+}
