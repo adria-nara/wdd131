@@ -2,6 +2,19 @@
               Estilos Base - Mobile
    =============================================== */
 
+:root {
+    --primary-color: #556299;
+    --primary-dark: #006b38;
+    --traco-color: #d9b310;
+    --bg-color: #f2f5f2;
+    --bg-body: #ffffff;
+    --title-card: #111111;
+    --text-dados: #3b7399;
+    --subt-dados: #222222;
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Open Sans', sans-serif;
+}
+
 /* Reset e configurações gerais */
 * {
     box-sizing: border-box;
@@ -10,8 +23,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffff;
+    font-family: var(--font-main);
+    background-color: var(--bg-body);
     color: #574f4f;
     line-height: 1.5;
 }
@@ -25,11 +38,11 @@ header, main, footer {
 
 /* Cabeçalho superior */
 .box-header {
-    background-color: #556299; 
+    background-color: var(--primary-color); 
     color: #ffffff;
     text-align: center;
     padding: 16px;
-    border-bottom: 8px solid #d9b310; 
+    border-bottom: 8px solid var(--traco-color); 
 }
 
 .box-header h1 {
@@ -65,7 +78,7 @@ main {
     max-width: 450px;
     margin: 20px auto;
     padding: 20px 15px;
-    background-color: #ffffff;
+    background-color: var(--bg-body);
     border-radius: 4px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: grid;
@@ -80,7 +93,7 @@ main {
     grid-column: 1 / -1;
     text-align: center;
     font-size: 1.8rem;
-    color: #111111;
+    color: var(--title-card);
     margin-bottom: 8px;
 }
 
@@ -96,20 +109,20 @@ main {
     text-align: right;
     font-size: 0.92rem;
     font-weight: 700;
-    color: #222222;
+    color: var(subt-dados);
 }
 
 /* Valores correspondentes */
 .dados p {
     text-align: left;
     font-size: 0.92rem;
-    color: #3b7399;
+    color: var(--text-dados);
 }
 
 /* Rodapé */
 footer {
-    background-color: #556299;  
-    color: #ffffff;
+    background-color: var(--primary-color);  
+    color: var(--bg-body);
     text-align: center;
     padding: 16px 10px;
     font-size: 0.85rem;
@@ -119,4 +132,9 @@ footer {
 
 footer p {
     margin: 3px 0;
+}
+
+#sensacaoTermica::after {
+    content: " °C";
+    font-weight: bold;
 }
