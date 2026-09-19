@@ -8,7 +8,7 @@
     <meta name="author" content="Adria Silva">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap%22" rel="stylesheet">
     <link href="estilos/local.css" rel="stylesheet">
     <link href="estilos/local-grande.css" rel="stylesheet">
     <script src="scripts/local.js" defer></script>
@@ -19,11 +19,11 @@
     </header>
     <main>
         <div class="hero-image">
-            <img srcset="imagens/castelo.jpg 480w,
-                         imagens/castelo.jpg 840w"
-                  sizes="(max-width: 600px) 100vw, 840px"
-                    src="imagens/castelo.jpg"
-                    alt="Foto do castelo">
+            <picture>
+              <source srcset="imagens/disney-grande.webp" media="(min-width: 1000px)">
+              <source srcset="imagens/disney-media.webp" media="(min-width: 640px)">
+              <img src="imagens/disney-pequeno.webp" alt="Disney-Orlando" width="400" height="200">
+          </picture>
         </div>
         <section class="dados">
             <h2>Dados</h2>
@@ -46,16 +46,16 @@
         </section>
         <section class="dados">
             <h2>Weather</h2>
-            <img src="imagens/previsao.svg" alt="ícone de previsão do tempo" width="80">
+            <img src="imagens/clima.svg" alt="ícone de previsão do tempo" width="80">
            
             <h3>Temperature:</h3> 
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>30°C 86°F.</p>
             <h3>Conditions:</h3> 
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Parcialmente nublado com pancadas de chuva isoladas (chuvas de verão comuns à tarde).</p>
             <h3>Wind:</h3> 
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Leste-Nordeste a 13 km/h 8 mph .</p>
             <h3>Wind Chill:</h3> 
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>35°C (95°F) (sensação térmica elevada devido à alta umidade de ~80%).</p>
 
         </section>
     </main>

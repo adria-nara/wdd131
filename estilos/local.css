@@ -40,19 +40,19 @@ header, main, footer {
 
 /* Container Principal */
 main {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
 
 /* Imagem Hero */
 .hero-image {
-    width: 90%;
+    width: 100%;
     margin: .5rem 1.6rem;
 }
 
 .hero-image img {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
     object-fit: cover;
@@ -68,8 +68,6 @@ main {
     background-color: #ffffff;
     border-radius: 4px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
-    /* Grid para alinhar rótulos (h3) e valores (p) */
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
