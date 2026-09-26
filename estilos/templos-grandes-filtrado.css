@@ -1,0 +1,72 @@
+@media screen and (min-width: 640px) {
+
+  /* Expandir a largura máxima no desktop para acomodar múltiplas colunas */
+  header, main, footer {
+    max-width: 1100px;
+  }
+
+  /* 1. Ajustes no Cabeçalho */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .box-header {
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Oculta o botão hambúrguer */
+  #botao-menu {
+    display: none;
+  }
+
+  /* Exibe a navegação horizontalmente */
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    border-top: none;
+    background-color: transparent;
+  }
+
+  nav a {
+    border-bottom: none;
+    border-radius: var(--radius);
+    margin-left: 0.3rem;
+    padding: 0.6rem 1rem;
+  }
+
+  #categoria {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+
+  /* 2. Layout em Grid e Padronização dos Cards */
+  .album-templos {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+
+  /* Mantém a estrutura dos cartões uniforme */
+  .album-templos section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantém a imagem sempre alinhada na parte inferior */
+  }
+
+  /* Padronização estrita de tamanho para todas as imagens */
+  .album-templos section img {
+    width: 100%;
+    height: 200px;        /* Altura fixa idêntica para todas */
+    object-fit: cover;    /* Preenche a área sem distorcer a proporção */
+    margin-top: auto;     /* Empurra a imagem para a base do cartão */
+  }
+}
+

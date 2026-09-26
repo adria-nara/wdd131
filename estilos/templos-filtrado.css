@@ -1,0 +1,194 @@
+/* CSS - Mobile */
+
+
+:root {
+  --primary-color: #0f3b25;
+  --secondary-color: #1e5a38;
+  --accent-color: #70cf98;
+  --bg-color: #f1f6f3;
+  --card-bg: #ffffff;
+  --text-color: #112217;
+  --light-text: #ffffff;
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 8px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.2rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Botão Hambúrguer */
+#botao-menu {
+  background: none;
+  border: none;
+  color: var(--light-text);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+#botao-menu:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+/* Menu de Navegação Oculto no Mobile */
+nav ul {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  list-style-type: none;
+}
+
+nav ul.open {
+  display: flex; /* Exibido quando o JS ativa a classe 'open' */
+}
+
+nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
+  font-weight: 450;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+/* 3. Conteúdo Principal e Cards (1 Coluna no Mobile) */
+header, main, footer{
+  max-width: 1200px;
+   width: 90%;
+  margin: 1.5rem auto;
+}
+
+main {
+  flex: 1; 
+}
+
+#categoria {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 3px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.album-templos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+
+/* Estilo do Cartão do Templo (<section>) */
+.album-templos section {
+  background-color: var(--card-bg);
+  border: 1px solid #dcdcdc;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 1.25rem 1rem 1rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-templos section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do Templo */
+.album-templos section h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.35rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Textos informativos */
+.album-templos section p {
+  margin: 0.15rem 0;
+  font-size: 0.95rem;
+  color: #222222;
+}
+
+/* Rótulos em destaque (LOCALIZAÇÃO, DEDICADO, TAMANHO) */
+.album-templos section .label {
+  color: var(--label-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Imagem com sombra interna/externa destacada */
+.album-templos section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 0.8rem;
+  border-radius: 2px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+
+
+/* 4. Rodapé */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
