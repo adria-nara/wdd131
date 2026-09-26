@@ -3,14 +3,21 @@
    =============================================== */
 
 :root {
-    --primary-color: #556299;
+    /* Ajustado para tom levemente mais escuro para aumentar contraste com fundo claro */
+    --primary-color: #435080; 
     --primary-dark: #006b38;
-    --traco-color: #d9b310;
+    
+    /* Tom dourado mais escuro para melhor destaque na borda */
+    --traco-color: #B8860B; 
+    
     --bg-color: #f2f5f2;
     --bg-body: #ffffff;
     --title-card: #111111;
-    --text-dados: #3b7399;
+    
+    /* CORRIGIDO: Escurecido de #3b7399 para #215275 para atingir > 7:1 de contraste (WCAG AAA) */
+    --text-dados: #215275; 
     --subt-dados: #222222;
+    
     --font-main: 'Roboto', sans-serif;
     --font-heading: 'Open Sans', sans-serif;
 }
@@ -25,7 +32,8 @@
 body {
     font-family: var(--font-main);
     background-color: var(--bg-body);
-    color: #574f4f;
+    /* CORRIGIDO: Ajustado de #574f4f para #333333 para maximizar a legibilidade */
+    color: #333333; 
     line-height: 1.5;
 }
 
@@ -35,11 +43,10 @@ header, main, footer {
     margin: .5rem auto;
 }
 
-
 /* Cabeçalho superior */
 .box-header {
     background-color: var(--primary-color); 
-    color: #ffffff;
+    color: #ffffff; /* Contraste > 7:1 com o novo --primary-color */
     text-align: center;
     padding: 16px;
     border-bottom: 8px solid var(--traco-color); 
@@ -97,6 +104,16 @@ main {
     margin-bottom: 8px;
 }
 
+.dados:nth-of-type(2) img {
+    display: none;
+}
+
+.dados:nth-of-type(2) h2::after {
+    content: " ⛅";
+    font-size: 1.2rem;
+    float: right;
+}
+
 /* Ícone de Tempo no Mobile */
 .dados img {
     grid-column: 1 / -1;
@@ -122,7 +139,7 @@ main {
 /* Rodapé */
 footer {
     background-color: var(--primary-color);  
-    color: var(--bg-body);
+    color: #ffffff; /* Forçado texto branco puro em vez da variável para garantir contraste */
     text-align: center;
     padding: 16px 10px;
     font-size: 0.85rem;

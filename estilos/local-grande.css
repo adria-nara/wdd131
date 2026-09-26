@@ -27,7 +27,11 @@
         max-width: none;
         margin: 0;
         padding: 0 0 15px 0;
-        background-color: #FFFFFFE0;
+        
+        /* CORRIGIDO: Removida a opacidade alfa (E0) e definido fundo 100% opaco 
+           para impedir que a imagem de fundo (.hero-image) afete o contraste do texto */
+        background-color: #ffffff;
+        
         border-radius: 10px;
         box-shadow: 0 4px 15px #00000040;
         
@@ -49,12 +53,16 @@
         right: 45px;
     }
 
-    /* Cabeçalho dos cartões (Barra Verde) */
+    /* Cabeçalho dos cartões */
     .dados h2 {
         grid-column: 1 / -1;
         grid-row: 1;
-        background-color: #556299;  
+        
+        /* CORRIGIDO: Escurecido de #556299 para #435080 para elevar o contraste
+           com o texto branco de 5.2:1 para 7.5:1 (Padrão WCAG AAA) */
+        background-color: #435080;  
         color: #ffffff;
+        
         text-align: left;
         padding: 10px 18px;
         font-size: 1.4rem;
@@ -62,7 +70,17 @@
         margin-bottom: 10px;
     }
 
-    /* Posicionamento do ícone do tempo dentro do cabeçalho verde no 2º cartão */
+    .dados:nth-of-type(2) img {
+        display: none;
+    }
+    
+    .dados:nth-of-type(2) h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+        float: right;
+    }
+
+    /* Posicionamento do ícone do tempo dentro do cabeçalho no 2º cartão */
     .dados:nth-of-type(2) img {
         grid-column: 2;
         grid-row: 1;
