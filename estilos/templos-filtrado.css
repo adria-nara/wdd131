@@ -130,7 +130,7 @@ main {
   background-color: var(--card-bg);
   border: 1px solid #dcdcdc;
   border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(#00000026);
+  box-shadow: 0 4px 8px #00000026;
   padding: 1.25rem 1rem 1rem 1rem;
   text-align: center;
   display: flex;
