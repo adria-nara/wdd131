@@ -10,7 +10,7 @@
   --text-color: #112217;
   --light-text: #ffffff;
   --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow: 0 4px 12px #00000014;
   --radius: 8px;
 }
 
@@ -74,7 +74,7 @@ nav ul {
   display: none;
   flex-direction: column;
   background-color: var(--primary-color);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #FFFFFF1A;
   list-style-type: none;
 }
 
@@ -88,7 +88,7 @@ nav a {
   padding: 0.9rem 1.5rem;
   font-weight: 450;
   transition: background-color 0.2s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #ffffff0d;
 }
 
 nav a:hover,
@@ -130,7 +130,7 @@ main {
   background-color: var(--card-bg);
   border: 1px solid #dcdcdc;
   border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(#00000026);
   padding: 1.25rem 1rem 1rem 1rem;
   text-align: center;
   display: flex;
@@ -141,7 +141,7 @@ main {
 
 .album-templos section:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px #00000033;
 }
 
 /* Título do Templo */
@@ -174,7 +174,7 @@ main {
   object-fit: cover;
   margin-top: 0.8rem;
   border-radius: 2px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 14px #00000059;
 }
 
 
