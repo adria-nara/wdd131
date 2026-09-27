@@ -105,14 +105,9 @@ main {
 }
 
 .dados:nth-of-type(2) img {
-    display: none;
+    display:flex;
 }
 
-.dados:nth-of-type(2) h2::after {
-    content: " ⛅";
-    font-size: 1.2rem;
-    float: right;
-}
 
 /* Ícone de Tempo no Mobile */
 .dados img {
@@ -154,4 +149,6 @@ footer p {
 #sensacaoTermica::after {
     content: " °C";
     font-weight: bold;
+    font-size: 0.92rem;
+    color: var(--subt-dados);
 }
