@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação do Produto</title>
+    <meta name="description" content="Formulário interativo de avaliação de produtos para envio de opiniões e classificações do usuário.">
+    <meta name="author" content="Adria Silva">
+    <link href="estilos/formulario.css" rel="stylesheet"> 
+    <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+
+    <header class="header-banner">
+        <h1>Avaliação do Produto</h1>
+    </header>
+
+    <main class="form-container">
+        <form id="evaluationForm" action="avaliacao.html" method="get" novalidate>
+            
+            <!-- Nome do Produto -->
+            <div class="form-group">
+                <label for="productSelect" class="form-label">Nome do Produto</label>
+                <select id="productSelect" name="product" required>
+                    <option value="" selected disabled hidden>Selecione um Produto ...</option>
+                    <option value="Smartphone Premium">Smartphone Premium</option>
+                    <option value="Notebook Ultrafino">Notebook Ultrafino</option>
+                    <option value="Fone Bluetooth Noise Cancelling">Fone Bluetooth Noise Cancelling</option>
+                    <option value="Smartwatch Fitness Pro">Smartwatch Fitness Pro</option>
+                    <option value="Monitor Gaming 4K">Monitor Gaming 4K</option>
+                </select>
+                <div class="error-message" id="productError">Por favor, selecione um produto.</div>
+            </div>
+
+            <!-- Classificação Geral -->
+            <div class="form-group">
+                <span class="form-label">Classificação Geral</span>
+                <div class="rating-grid">
+                    <div class="rating-item">
+                        <label for="rating1" class="rating-stars">☆</label>
+                        <input type="radio" id="rating1" name="rating" value="1" class="custom-radio" required aria-label="1 Estrela">
+                    </div>
+                    <div class="rating-item">
+                        <label for="rating2" class="rating-stars">☆☆</label>
+                        <input type="radio" id="rating2" name="rating" value="2" class="custom-radio" required aria-label="2 Estrelas">
+                    </div>
+                    <div class="rating-item">
+                        <label for="rating3" class="rating-stars">☆☆☆</label>
+                        <input type="radio" id="rating3" name="rating" value="3" class="custom-radio" required aria-label="3 Estrelas">
+                    </div>
+                    <div class="rating-item">
+                        <label for="rating4" class="rating-stars">☆☆☆☆</label>
+                        <input type="radio" id="rating4" name="rating" value="4" class="custom-radio" required aria-label="4 Estrelas">
+                    </div>
+                    <div class="rating-item">
+                        <label for="rating5" class="rating-stars">☆☆☆☆☆</label>
+                        <input type="radio" id="rating5" name="rating" value="5" class="custom-radio" required aria-label="5 Estrelas">
+                    </div>
+                </div>
+                <div class="error-message" id="ratingError">Selecione uma classificação.</div>
+            </div>
+
+            <!-- Data de Instalação -->
+            <div class="form-group">
+                <label for="installDate" class="form-label">Data de Instalação</label>
+                <input type="date" id="installDate" name="installDate" required>
+                <div class="error-message" id="dateError">Por favor, informe a data de instalação.</div>
+            </div>
+
+            <!-- Recursos Úteis -->
+            <div class="form-group">
+                <label class="form-label label-recursos">Quais recursos você achou úteis no produto?</label>
+                <span class="sub-label">(Marque todos que se aplicam)</span>
+                
+                <div class="checkbox-group">
+                    <label for="resource-durabilidade" class="checkbox-item">
+                        <input type="checkbox" id="resource-durabilidade" name="resources" value="Durabilidade" class="custom-checkbox">
+                        <span class="checkbox-label">Durabilidade</span>
+                    </label>
+                    <label for="resource-facilidade" class="checkbox-item">
+                        <input type="checkbox" id="resource-facilidade" name="resources" value="Facilidade de Uso" class="custom-checkbox">
+                        <span class="checkbox-label">Facilidade de Uso</span>
+                    </label>
+                    <label for="resource-desempenho" class="checkbox-item">
+                        <input type="checkbox" id="resource-desempenho" name="resources" value="Desempenho" class="custom-checkbox">
+                        <span class="checkbox-label">Desempenho</span>
+                    </label>
+                    <label for="resource-design" class="checkbox-item">
+                        <input type="checkbox" id="resource-design" name="resources" value="Design" class="custom-checkbox">
+                        <span class="checkbox-label">Design</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Avaliação Escrita -->
+            <div class="form-group">
+                <label for="writtenReview" class="form-label">
+                    Avaliação Escrita <span class="optional">(Opcional)</span>
+                </label>
+                <textarea id="writtenReview" name="writtenReview"></textarea>
+            </div>
+
+            <!-- Seu Nome -->
+            <div class="form-group">
+                <label for="userName" class="form-label">
+                    Seu Nome <span class="optional">(Opcional)</span>
+                </label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <!-- Botão Publicar -->
+            <button type="submit" class="submit-btn">Publicar Avaliação</button>
+        </form>
+    </main>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-card">
+            <div class="modal-icon">🌺</div>
+            <div class="modal-title">Avaliação Enviada!</div>
+            <div class="modal-body" id="modalContent">
+                Sua avaliação foi registrada com sucesso. Obrigado pelo seu feedback!
+            </div>
+            <button class="modal-close-btn" id="closeModalBtn">Fechar</button>
+        </div>
+    </div>
+
+    <footer class="footer-banner">
+        <p>&copy; <span id="anoAtual"></span> | 🌺Adria Nara da Silva🌺</p>
+        <p>Manaus - Amazonas</p>
+        <p id="ultimaModificacao">Última modificação: <span id="dataModificacao"></span></p>
+    </footer>
+</body>
+</html>
