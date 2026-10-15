@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Marca Adria">
+  <rect width="256" height="256" rx="128" fill="#18342d"/>
+  <circle cx="128" cy="128" r="110" fill="none" stroke="#bd9b62" stroke-width="3"/>
+  <path d="M128 48 69 202h21l15-40h47l15 40h21L128 48Zm0 49 17 47h-34l17-47Z" fill="#e0c58d"/>
+</svg>
