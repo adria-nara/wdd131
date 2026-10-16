@@ -3,36 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Relógios clássicos e contemporâneos na curadoria Adria.">
+  <meta name="description" content="Relógios clássicos e contemporâneos selecionados na curadoria Adria.">
   <meta name="theme-color" content="#18342d">
   <title>Relógios — Adria</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos/styles.css">
-  <script src="relogios/products.js" defer></script>
-  <script src="relogios/app.js" defer></script>
+  <script src="scripts/products.js" defer></script>
+  <script src="scripts/app.js" defer></script>
 </head>
 <body data-page="relogios">
   <div class="announcement">Uma curadoria atemporal, para marcar o que importa.</div>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Adria, página inicial"><span class="brand-mark" aria-hidden="true">A</span><span>ADRIA<small>JOIAS & RELOGIOS</small></span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu"><span></span><span></span></button>
-    <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal"><a href="index.html">Início</a><a href="joias.html">Joias</a><a class="active" href="relogios.html" aria-current="page">Relógios</a></nav>
-    <a class="bag-link" href="#catalogo" aria-label="Sacola de compras"><span aria-hidden="true">♡</span><span class="bag-count" data-bag-count>0</span></a>
+    <a class="brand" href="index.html" aria-label="Adria, página inicial">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>ADRIA<small>JOIAS & RELÓGIOS</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="joias.html">Joias</a>
+      <a class="active" href="relogios.html" aria-current="page">Relógios</a>
+    </nav>
+    <a class="bag-link" href="#catalogo" aria-label="Sacola de compras">
+      <span aria-hidden="true">♡</span>
+      <span class="bag-count" data-bag-count>0</span>
+    </a>
   </header>
   <main>
-    <section class="collection-hero collection-watches"><div><p class="eyebrow"><span></span> Coleção Adria</p><h1>Um clássico.<br><em>Do seu jeito.</em></h1><p>Precisão e personalidade em relógios feitos para acompanhar o seu ritmo.</p></div><span class="collection-index">02 <i>—</i> 02</span></section>
+    <section class="collection-hero collection-watches">
+      <div>
+        <p class="eyebrow"><span></span> Coleção Adria</p>
+        <h1>Um clássico.<br><em>Do seu jeito.</em></h1>
+        <p>Precisão e personalidade em relógios feitos para acompanhar o seu ritmo.</p>
+      </div>
+      <span class="collection-index">02 <i>—</i> 02</span>
+    </section>
     <section class="section catalog-section" id="catalogo">
-      <div class="section-heading catalog-heading"><div><p class="eyebrow"><span></span> A seleção</p><h2>Relógios <em>para durar.</em></h2></div><label class="search-box"><span aria-hidden="true">⌕</span><input type="search" placeholder="Buscar um relógio" aria-label="Buscar relógios" data-search></label></div>
-      <div class="catalog-meta"><span data-result-count></span><span>Produtos e valores demonstrativos.</span></div>
+      <div class="section-heading catalog-heading">
+        <div>
+          <p class="eyebrow"><span></span> A seleção</p>
+          <h2>Relógios <em>para durar.</em></h2>
+        </div>
+        <label class="search-box" for="search-watches">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-watches" type="search" placeholder="Buscar um relógio" aria-label="Buscar relógios" data-search>
+        </label>
+      </div>
+      <div class="catalog-meta">
+        <span data-result-count></span>
+        <span>Modelos exclusivos e cronógrafos.</span>
+      </div>
       <div class="product-grid" data-product-list data-mode="category" data-category="relogios" aria-live="polite"></div>
       <p class="empty-state" hidden>Nenhum relógio encontrado. Tente outra busca.</p>
     </section>
-    <section class="editorial-strip"><span aria-hidden="true">✳</span><p>“Alguns momentos merecem ser marcados para sempre.”</p><span>— ADRIA</span></section>
+    <section class="editorial-strip">
+      <span aria-hidden="true">✳</span>
+      <p>“Alguns momentos merecem ser marcados para sempre.”</p>
+      <span>— ADRIA</span>
+    </section>
   </main>
-  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">A</span><span>ADRIA<small>JOIAS & RELOGIOS</small></span></a><p>Peças que acompanham você.</p><div class="footer-links"><a href="joias.html">Joias</a><a href="relogios.html">Relógios</a></div><small>© <span data-year></span> Adria. Feito para durar.</small></footer>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>ADRIA<small>JOIAS & RELÓGIOS</small></span>
+    </a>
+    <p>Peças que acompanham você.</p>
+    <div class="footer-links">
+      <a href="joias.html">Joias</a>
+      <a href="relogios.html">Relógios</a>
+    </div>
+    <small>© <span data-year></span> Adria. Feito para durar.</small>
+  </footer>
   <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
-
