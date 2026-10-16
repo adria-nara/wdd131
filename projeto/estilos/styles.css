@@ -550,7 +550,7 @@ button:focus-visible, input:focus-visible, a:focus-visible {
   line-height: 1.9;
 }
 
-/* Seção Newsletter */
+
 .newsletter-section {
   max-width: var(--page);
   margin: 0 auto;

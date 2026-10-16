@@ -1,3 +1,5 @@
+/* app.js */
+
 (() => {
   const formatarPreco = (valor) => new Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -34,6 +36,7 @@
       return []; 
     }
   };
+ 
 
   const atualizarSacola = () => {
     const total = obterSacola().reduce((soma, item) => soma + item.quantidade, 0);

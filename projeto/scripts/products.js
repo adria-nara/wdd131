@@ -1,4 +1,4 @@
-/* Catálogo central da loja. Edite ou acrescente itens nesta constante. */
+
 const PRODUTOS = [
   { 
     id: "colar-luz", 
