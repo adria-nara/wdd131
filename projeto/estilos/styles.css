@@ -52,7 +52,7 @@ button:focus-visible, input:focus-visible, a:focus-visible {
   outline-offset: 2px;
 }
 
-/* Barra de Anúncios */
+
 .announcement {
   min-height: 32px;
   display: flex;

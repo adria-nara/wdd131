@@ -1,4 +1,4 @@
-/* app.js */
+
 
 (() => {
   const formatarPreco = (valor) => new Intl.NumberFormat("pt-BR", {

@@ -60,7 +60,7 @@ const PRODUTOS = [
     nome: "Clássico 36", 
     categoria: "Relógio analógico", 
     colecao: "relogios", 
-    preco: 1190.00, 
+    preco: 1180.00, 
     imagem: "imagens/watch-heritage.jpg", 
     alt: "Relógio clássico com pulseira metálica", 
     destaque: true, 
